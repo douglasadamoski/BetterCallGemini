@@ -1,0 +1,18 @@
+# Runtime state — recreated on first run; never commit (it holds your usage ledger,
+# guard stashes, and temp prompt files that can name your private projects).
+state/*
+!state/.gitkeep
+
+# Reports the skill writes into projects it reviews
+BETTERCALLGEMINI_REVIEW_*.md
+BETTERCALLGEMINI_SANDBOX_*.md
+BCG_REVIEW_*.md
+
+# agy session captures / login transcripts (may contain OAuth codes)
+gemini-login.txt
+*.typescript
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*~
