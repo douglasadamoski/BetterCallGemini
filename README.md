@@ -28,6 +28,19 @@ agy                  # complete the Google sign-in in your browser
 agy -p 'reply OK'    # should print OK within a few seconds — you're good
 ```
 
+> **Trouble logging in on a remote machine?** Some people hit authentication issues when running
+> `agy` over SSH / on a headless box (the browser sign-in link can be hard to capture). A handy
+> workaround is to give `agy` a PTY and tee the session to a file so you can grab the URL:
+>
+> ```bash
+> script -f gemini-login.txt   # opens a recording shell with a real terminal
+> agy                          # start agy inside it, then open the printed sign-in link in your browser
+> ```
+>
+> Read the OAuth link out of `gemini-login.txt`, complete it in your browser, then exit the shell.
+> ⚠️ That file records the whole session (including OAuth codes) — **delete `gemini-login.txt`
+> afterward** (it's already in `.gitignore` so it never gets committed).
+
 ### 2️⃣ Put this skill in your Claude
 Drop the repo straight into Claude Code's skills folder (the repo root *is* the skill):
 
