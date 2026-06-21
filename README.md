@@ -49,15 +49,21 @@ git clone https://github.com/douglasadamoski/BetterCallGemini.git ~/.claude/skil
 ```
 
 ### 3️⃣ That's it — call it
-In Claude Code, just say:
+In Claude Code, run the slash command:
+
+```
+/BetterCallGemini
+```
+
+…or just describe the task and let Claude auto-trigger it:
 
 ```
 better call gemini on this folder
 ```
 
-Claude composes the critique prompt, sends your whole codebase to Gemini's giant context, brings
-back a prioritized review, and implements the findings worth keeping — while the edit-guard makes
-sure `agy` itself never changed a thing. ✅
+Either way, Claude composes the critique prompt, sends your whole codebase to Gemini's giant
+context, brings back a prioritized review, and implements the findings worth keeping — while the
+edit-guard makes sure `agy` itself never changed a thing. ✅
 
 ---
 
