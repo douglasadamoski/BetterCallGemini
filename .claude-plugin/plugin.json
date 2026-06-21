@@ -1,0 +1,14 @@
+{
+  "name": "better-call-gemini",
+  "displayName": "BetterCallGemini",
+  "version": "1.1.0",
+  "description": "Delegate an independent, critical code review to Google Antigravity's CLI (agy / Gemini); Claude then triages and implements the feedback. agy only criticizes and proposes — an architectural edit-guard guarantees it never changes the codebase.",
+  "author": {
+    "name": "Douglas Adamoski",
+    "url": "https://github.com/douglasadamoski"
+  },
+  "homepage": "https://github.com/douglasadamoski/BetterCallGemini",
+  "repository": "https://github.com/douglasadamoski/BetterCallGemini",
+  "license": "GPL-3.0",
+  "keywords": ["code-review", "gemini", "agy", "antigravity", "claude-code", "skill"]
+}

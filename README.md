@@ -42,11 +42,20 @@ agy -p 'reply OK'    # should print OK within a few seconds — you're good
 > afterward** (it's already in `.gitignore` so it never gets committed).
 
 ### 2️⃣ Put this skill in your Claude
-Drop the repo straight into Claude Code's skills folder (the repo root *is* the skill):
+Easiest — install it as a **plugin** from its built-in marketplace, right inside Claude Code:
+
+```
+/plugin marketplace add douglasadamoski/BetterCallGemini
+/plugin install better-call-gemini@bettercallgemini
+```
+
+Prefer a plain clone instead? The repo root *is* the skill, so:
 
 ```bash
 git clone https://github.com/douglasadamoski/BetterCallGemini.git ~/.claude/skills/BetterCallGemini
 ```
+
+(See [Install](#install) for all three methods.)
 
 ### 3️⃣ That's it — call it
 In Claude Code, run the slash command:
@@ -112,20 +121,44 @@ your code" is guaranteed **architecturally**, not by configuration:
 
 ## Install
 
-Claude Code auto-discovers skills under `~/.claude/skills/`. Clone the repo directly as the
-skill folder:
+Pick whichever you like — all three end up with the skill available as `/BetterCallGemini`.
+No build step in any of them.
+
+### Method 1 — Plugin marketplace (recommended)
+This repo is also a Claude Code plugin marketplace, so you can install it without leaving Claude:
+
+```
+/plugin marketplace add douglasadamoski/BetterCallGemini
+/plugin install better-call-gemini@bettercallgemini
+```
+
+`/plugin marketplace add` registers this repo; `/plugin install` adds the plugin (which bundles
+the skill). Update later with `/plugin marketplace update bettercallgemini`.
+
+### Method 2 — Clone into your skills folder
+Claude Code auto-discovers skills under `~/.claude/skills/`. The repo root *is* the skill, so
+clone it directly as the skill folder:
 
 ```bash
 git clone https://github.com/douglasadamoski/BetterCallGemini.git ~/.claude/skills/BetterCallGemini
 ```
 
-(or copy the folder there). That's it — no build step. Then in Claude Code:
+(or download the ZIP and extract it there). It's picked up in the same session — run
+`/reload-plugins` if it doesn't appear immediately for auto-triggering.
 
+### Method 3 — Let Claude clone it for you
+In any Claude Code session, just ask:
+
+> clone `https://github.com/douglasadamoski/BetterCallGemini` into `~/.claude/skills/BetterCallGemini`
+
+Claude runs the one `git clone` and the skill registers itself. (Pasting the URL alone does
+**not** auto-install anything — you have to ask.)
+
+### Then use it
 ```
 /BetterCallGemini
 ```
-
-or just say *"better call gemini on this folder"* / *"have gemini criticize this code"*.
+…or just say *"better call gemini on this folder"* / *"have gemini criticize this code"*.
 
 ## Usage
 

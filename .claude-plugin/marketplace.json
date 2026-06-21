@@ -1,0 +1,24 @@
+{
+  "name": "bettercallgemini",
+  "description": "Marketplace for the BetterCallGemini Claude Code plugin.",
+  "owner": {
+    "name": "Douglas Adamoski"
+  },
+  "plugins": [
+    {
+      "name": "better-call-gemini",
+      "displayName": "BetterCallGemini",
+      "description": "Delegate an independent, critical code review to Google Antigravity's CLI (agy / Gemini); Claude triages and implements. agy only criticizes and proposes — an edit-guard guarantees it never changes the codebase.",
+      "source": "./",
+      "version": "1.1.0",
+      "author": {
+        "name": "Douglas Adamoski",
+        "url": "https://github.com/douglasadamoski"
+      },
+      "homepage": "https://github.com/douglasadamoski/BetterCallGemini",
+      "repository": "https://github.com/douglasadamoski/BetterCallGemini",
+      "license": "GPL-3.0",
+      "keywords": ["code-review", "gemini", "agy", "antigravity", "claude-code"]
+    }
+  ]
+}
