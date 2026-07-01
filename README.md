@@ -10,6 +10,8 @@ implements it. `agy` only reviews and proposes; it never edits your code or runs
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
+**🔗 Sibling skill: [⚖ BetterCallChatGPT ⚖](https://github.com/douglasadamoski/BetterCallChatGPT) — the same idea, with OpenAI's Codex (ChatGPT) instead of Gemini.**
+
 </div>
 
 ---
